@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base Converter</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #cee0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        /* Title */
+        .container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Select + input fields */
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        /* Textarea */
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            resize: none;
+            font-size: 16px;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        /* Buttons */
+        button.home-btn {
+            background-color: #849ebd;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button.home-btn:hover {
+            background-color: #6a84a0;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Base Converter</h1>
+
+    <input type="text" id="numberInput" placeholder="Enter number (e.g. 1011, 2F, 99)">
+     
+    <select id="fromBase">
+        <option value="2">Base 2 (Binary)</option>
+        <option value="8">Base 8 (Octal)</option>
+        <option value="10" selected>Base 10 (Decimal)</option>
+        <option value="16">Base 16 (Hex)</option>
+    </select>
+
+    <select id="toBase">
+        <option value="2">Base 2 (Binary)</option>
+        <option value="8">Base 8 (Octal)</option>
+        <option value="10" selected>Base 10 (Decimal)</option>
+        <option value="16">Base 16 (Hex)</option>
+    </select>
+
+    <button class="home-btn" onclick="convertBase()">Convert</button>
+    <button class="home-btn" onclick="location.href='index.html'">Back Home</button>
+
+    <textarea id="output" placeholder="Result will appear here..." readonly></textarea>
+</div>
+
+<script>
+function convertBase() {
+    let number = document.getElementById("numberInput").value.trim();
+    let fromBase = parseInt(document.getElementById("fromBase").value);
+    let toBase = parseInt(document.getElementById("toBase").value);
+    let outputField = document.getElementById("output");
+
+    if (number === "") {
+        outputField.value = "Please enter a number.";
+        return;
+    }
+
+    try {
+        // Convert number from original base → decimal
+        let decimalValue = parseInt(number, fromBase);
+
+        if (isNaN(decimalValue)) {
+            outputField.value = "Invalid number for base " + fromBase;
+            return;
+        }
+
+        // Convert decimal → target base
+        let result = decimalValue.toString(toBase).toUpperCase();
+
+        outputField.value = `Converted (${fromBase} → ${toBase}):\n` + result;
+
+    } catch (error) {
+        outputField.value = "Error converting number.";
+    }
+}
+</script>
+
+</body>
+</html>

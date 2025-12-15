@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Toolkit - Home</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #cee0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        /* Title */
+        .container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Buttons */
+        button.home-btn {
+            background-color: #849ebd;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            margin: 10px 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+            width: 80%;
+        }
+
+        button.home-btn:hover {
+            background-color: #6a84a0;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>IP/Base Toolkit</h1>
+
+    <button class="home-btn" onclick="location.href='ip_tools.html'">IP Address Tools</button><br>
+    <button class="home-btn" onclick="location.href='base.html'">Base Converter</button><br>
+    <button class="home-btn" onclick="location.href='about.html'">About & Contact</button><br>
+
+</div>
+
+</body>
+</html>

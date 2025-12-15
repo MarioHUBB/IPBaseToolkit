@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About – Cyber Networking Toolkit</title>
+<style>
+    body {
+        background-color: #cee0f5;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container {
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        text-align: left;
+        max-width: 800px;
+        width: 95%;
+        line-height: 1.8;
+    }
+    h1, h2, h3 {
+        color: #2e4a68;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    p, li {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .section {
+        margin-bottom: 30px;
+    }
+    ul {
+        margin-left: 20px;
+    }
+    .contact {
+        background-color: #f0f4f8;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .contact a {
+        color: #2e4a68;
+        text-decoration: none;
+    }
+    /* Buttons */
+        button.home-btn {
+            background-color: #849ebd;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            margin: 10px 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+            width: 20%;
+        }
+
+        button.home-btn:hover {
+            background-color: #6a84a0;
+            transform: scale(1.05);
+        }
+</style>
+</head>
+<body>
+    
+<div class="container"> 
+
+    <h1>Cyber Networking Toolkit</h1>
+    <h3>About This Project – by Mario Dumba</h3>
+
+    <div class="section">
+        <h2>1. Project Overview</h2>
+        <p>
+            The Cyber Networking Toolkit is a web-based educational and practical platform designed to assist students, networking professionals, and cybersecurity enthusiasts with common technical tasks. 
+            The website provides easy-to-use tools for IP addressing, subnetting, and number base conversion, all in one place.
+        </p>
+        <p>
+            This project focuses on combining theoretical networking concepts with hands-on practical tools that can be used for learning, revision, and real-world troubleshooting.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>2. How the Website Works</h2>
+        <p>
+            The website is built using HTML, CSS, and JavaScript. All calculations and conversions are performed client-side using JavaScript logic. 
+            This means results are generated instantly without sending user data to any server, ensuring speed, privacy, and security.
+        </p>
+        <p>
+            Each major feature is placed on its own dedicated page to keep the interface simple, organized, and easy to navigate.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>3. IP Addressing Tools</h2>
+        <p>
+            The IP Addressing Tools page focuses on subnetting and IPv4 analysis. Users can enter an IP address together with a subnet mask in either CIDR notation (e.g. <code>/24</code>) or dotted decimal format (e.g. <code>255.255.255.0</code>).
+        </p>
+        <p>The tool automatically calculates and displays:</p>
+        <ul>
+            <li>Network Address</li>
+            <li>Broadcast Address</li>
+            <li>Usable IP Address Range</li>
+            <li>CIDR Notation</li>
+            <li>Total Hosts</li>
+            <li>Usable Hosts</li>
+        </ul>
+        <p>
+            This feature is especially useful for network planning, exam preparation, and real-world scenarios such as configuring routers, switches, and DHCP servers.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>4. Number Base Converter</h2>
+        <p>
+            The Number Base Converter allows users to convert numbers between any bases ranging from base 2 to base 16. 
+            This includes common bases such as binary, octal, decimal, and hexadecimal.
+        </p>
+        <p>
+            Understanding number bases is essential in cybersecurity and computer science, especially when working with memory addresses, machine code, networking, and digital forensics.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>5. Real-World Applications</h2>
+        <p>
+            The Cyber Networking Toolkit can be used in academic, professional, and self-learning environments. 
+            It is particularly useful for:
+        </p>
+        <ul>
+            <li>Networking and cybersecurity students</li>
+            <li>IT support technicians</li>
+            <li>System and network administrators</li>
+            <li>Exam and lab preparation</li>
+        </ul>
+        <p>
+            By providing instant calculations and conversions, the toolkit reduces human error and improves understanding of core networking concepts.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>6. Project Goals</h2>
+        <ul>
+            <li>Simplify complex networking and cybersecurity calculations</li>
+            <li>Provide an educational, hands-on learning platform</li>
+            <li>Serve as a professional portfolio project</li>
+        </ul>
+    </div>
+
+    <div class="section contact">
+        <h2>Contact Information</h2>
+        <p>If you have questions, suggestions, or collaboration ideas, feel free to reach out:</p>
+        <ul>
+            <li>Email: <a href="mailto:dumbamari02@gmail.com">dumbamari02@gmail.com</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/modestmarioo" target="_blank">@modestmarioo</a></li>
+            <li>GitHub: <a href="https://github.com/MarioHUBB" target="_blank">github.com/MarioHUBB</a></li>
+        </ul>
+    </div>
+    <button class="home-btn" onclick="location.href='index.html'">Back Home</button>
+
+</div>
+
+</body>
+</html>
